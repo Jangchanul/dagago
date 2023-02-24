@@ -1,0 +1,64 @@
+html,body{
+  height: 100%;
+}
+
+body{
+  /*sherif, san sherif
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  color: #444;*/
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+*{
+  margin:0;
+  padding:0;
+  font-family: inherit;/*inherit 상속*/
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color:inherit;
+  text-decoration:inherit;
+  word-break: keep-all;
+}
+li{list-style: none;}
+iframe, fieldset{border: none;}
+table{border-spacing: 0;/*선 간격*/
+  border-collapse: collapse;/*선 겹칩*/
+}
+input, select, textarea{
+  box-sizing: border-box;
+}
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.hidden{
+  /*dispaly:none*/
+  position: fixed;
+  left: -10000px;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.center{
+  width: 1200px;
+  margin: 0 auto;
+}
+.pos_center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+select { 
+  border-radius:0; /* 아이폰 사파리 보더 없애기 */
+  -webkit-appearance:none; /* 화살표 없애기 for chrome*/
+  -moz-appearance:none; /* 화살표 없애기 for firefox*/
+  appearance:none /* 화살표 없애기 공통*/ }
+
