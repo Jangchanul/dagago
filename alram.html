@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 16.667vw;
+            height: 9.444vw;
+            vertical-align: middle;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            display: none;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 7.222vw;
+            width: 7.222vw;
+            left: 1.111vw;
+            bottom: 1.111vw;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #B4162C;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #B4162C;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(7.222vw);
+            -ms-transform: translateX(7.222vw);
+            transform: translateX(7.222vw);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 9.444vw;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="back_head" style="background: #fff;">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>알림설정</p>
+        </div>
+    </header>
+    <section class="alram">
+        <ul>
+            <li>
+                <div>
+                    <p onclick="location.href='schedule.html'">스케줄알림</p>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>배정알림</p>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>공지알림</p>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="bt_box1">
+            <button class="bt_1" style="background: #B4162C;" onclick="location.href='my_page.html'">확인</button>
+        </div>
+    </section>
+</body>
+
+</html>

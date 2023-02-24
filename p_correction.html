@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head" style="background: #fff;">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>개인정보 수정</p>
+        </div>
+    </header>
+    <section class="p_correction">
+        <div class="top">
+            <p>1. 기본정보</p>
+            <input type="text" placeholder="이름" onfocus="this.placeholder=''" onblur="this.placeholder='이름'">
+            <input type="number" placeholder="핸드폰 번호" onfocus="this.placeholder=''" onblur="this.placeholder='핸드폰 번호'">
+            <input type="email" placeholder="이메일 주소" onfocus="this.placeholder=''" onblur="this.placeholder='이메일 주소'">
+        </div>
+        <div class="top">
+            <p>2. 회사정보(선택입력)</p>
+            <input type="text" placeholder="회사(직장)명" onfocus="this.placeholder=''" onblur="this.placeholder='회사(직장)명'">
+            <input type="text" placeholder="직위" onfocus="this.placeholder=''" onblur="this.placeholder='직위'">
+        </div>
+        
+        <div class="bt_box1">
+            <button class="bt_1" onclick="location.href='privacy.html'">개인정보 수정</button>
+        </div>
+    </section>
+    
+</body>
+
+</html>

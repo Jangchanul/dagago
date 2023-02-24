@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head"">
+        <div>
+            <figure onclick=" javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+        <p>상세</p>
+        </div>
+    </header>
+    <section class="reservation_info">
+        <div class="top">
+            <p>오더번호 23456643780</p>
+            <button class="bt_cancel">예약취소</button>
+        </div>
+        <div class="mid">
+            <div class="left">
+                <figure><img src="./img/go.png" alt=""></figure>
+                <figure class="dot"><img src="./img/dot2.png" alt=""></figure>
+                <figure><img src="./img/stop.png" alt=""></figure>
+            </div>
+            <div class="right">
+                <div style="border-bottom: 1px solid #DDD;">
+                    <p class="strong">
+                        <b>부산시 강서구</b> 녹산산단382로 14번가길 10
+                    </p>
+                    <p class="small">
+                        세부장소 : CU편의점 앞 주차장
+                    </p>
+                </div>
+                <div>
+                    <p class="strong">
+                        <b>서울시 도봉구</b> 혜릉로 113
+                    </p>
+                    <p class="small">
+                        세부장소 : 건물 앞 1층 주차장
+                    </p>
+                </div>
+            </div>
+        </div>
+        <ul class="mid2">
+            <li>
+                <p class="o1">출발시간</p>
+                <p class="o2">21년 2월 11일 08:00</p>
+            </li>
+            <li>
+                <p class="o1">견인 차량</p>
+                <p class="o2">셀프로더</p>
+            </li>
+            <li>
+                <p class="o1">운송 대상 차량</p>
+                <p class="o2">일반승용/소나타</p>
+            </li>
+            <li>
+                <p class="o1">예상 소요시간</p>
+                <p class="o2">1시간 35분</p>
+            </li>
+            <li>
+                <p class="o1">상차담당자 연락처</p>
+                <p class="o2">010-1234-5678</p>
+            </li>
+            <li>
+                <p class="o1">하차담당자 연락처</p>
+                <p class="o2">010-1234-5678</p>
+            </li>
+        </ul>
+        <div class="bot">
+            <div>
+                <p class="a1">표준요금</p>
+                <p class="a2">90,000원</p>
+            </div>
+            <div>
+                <p class="a1">확정요금</p>
+                <p class="a3">90,000원</p>
+            </div>
+        </div>
+        <div class="bt_box1">
+            <button class="bt_1" style="background: #B4162C;">운송요금추가</button>
+        </div>
+    </section>
+    <div class="popup">
+        <div class="bg"></div>
+        <div class="box">
+            <p>운송요금추가</p>
+            <div class="mid">
+                <p style="font-size: 5.556vw;margin-bottom: 6.667vw;">운송요금을 추가하시겠습니까?</p>
+                <p style="color: #989898;width: 60%;margin: 0 auto;">운송요금을 증액하면 대표님 배정이 더 빨라 질 수 있습니다.</p>
+            </div>
+            <div class="bot">
+                <button class="close" style="background: #E2E2E2;color: #5D5D5D;">닫기</button>
+                <button class="plus" style="background: #B4162C;color: #fff;" onclick="location.href='add_fee.html'">운송요금추가</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup1">
+        <div class="bg"></div>
+        <div class="box">
+            <p>운송예약취소</p>
+            <div class="mid">
+                <p style="font-size: 5.556vw;margin-bottom: 6.667vw;">예약을 취소하시겠습니까?</p>
+            </div>
+            <div class="mid2">
+                <p>* 당일 취소 시 - 환불불가</p>
+                <p>* 당일 1일전 취소 시 - 90% 환불</p>
+            </div>
+            <div class="bot">
+                <button class="close" style="background: #E2E2E2;color: #5D5D5D;">닫기</button>
+                <button class="plus" style="background: #B4162C;color: #fff;">예약취소</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="bg"></div>
+        <div class="box">
+            <p>운송예약취소</p>
+            <div class="mid">
+                <p style="font-size: 6.111vw;">운송예약이 취소되었습니다</p>
+            </div>
+            <div class="bot">
+                <button class="close" style="background: #E2E2E2;color: #5D5D5D;">닫기</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

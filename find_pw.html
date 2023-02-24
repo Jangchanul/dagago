@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>비밀번호 찾기</p>
+        </div>
+    </header>
+    <section class="find_pw">
+        <div class="main">
+            <input type="text" placeholder="이름" onfocus="this.placeholder=''" onblur="this.placeholder='이름'">
+            <input type="number" placeholder="휴대폰 번호" onfocus="this.placeholder=''" onblur="this.placeholder='휴대폰 번호'">
+            <div class="right"><button>인증번호받기</button></div>
+            <div>
+                <input type="number" placeholder="인증번호 입력" id="t">
+                <button>인증하기</button>
+            </div>
+            <div>
+                <p>제한 시간내에 인증번호를 입력해 주세요</p>
+                <label for="t" style="color: #FF4B4B;font-weight: bold;">3:00</label>
+            </div>
+        </div>
+        <div class="bt_box"><button class="bt" onclick="location.href='find2.html'">비밀번호 찾기</button></div>
+    </section>
+</body>
+
+</html>

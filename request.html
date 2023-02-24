@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper {
+            width: 100%;
+            background: #f3f3f3;
+        }
+
+        .swiper-slide {
+            align-items: center;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mySwiper {
+            box-sizing: border-box;
+            text-align: center;
+            background: #fff;
+        }
+
+        .mySwiper .swiper-slide {
+            width: 25%;
+            opacity: 0.4;
+            border-bottom: 3px solid #ccc;
+            padding: 3.333vw 0;
+            font-size: 4.444vw;
+
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+            opacity: 1;
+            border-bottom: 3px solid #B4162C;
+            font-weight: 900;
+            color: #B4162C;
+        }
+    </style>
+    <script>
+        $(function () {
+                    $("[id^='ra']").click(function () {
+                        $('input[name="ra1"]').each(function () {
+                            if ($(this).is(":checked") == true) {
+                                if ($(this).val() == "tong") {
+                                    $(".dlqrma").show();
+                                    $(".point_use").hide()
+                                } else {
+                                    $(".dlqrma").hide()
+                                    $(".point_use").show()
+                                }
+                            }
+                        });
+                    })
+                })
+    </script>
+</head>
+
+<body>
+    <header class="home_head">
+        <div>
+            <figure class="h_l" onclick="location.href='my_page.html'"><img src="./img/menu.png" alt=""></figure>
+            <figure class="h_r" onclick="location.href='privacy.html'"><img src="./img/user.png" alt=""></figure>
+        </div>
+    </header>
+    <div class="chart_box">
+        <div><img src="./img/chart.jpg" alt=""></div>
+    </div>
+    <section class="request">
+        <div class="rt_box" style="display: none;">
+            <div class="bg"></div>
+            <div class="rt_box1">
+                <p>운송요금 설정</p>
+                <div>
+                    <input type='button' onclick='count("plus")' value='&and;' />
+                    <div>
+                        <div id='result'>30000</div>
+                        <p>원</p>
+                    </div>
+                    <input type='button' onclick='count("minus")' value='&or;' />
+                    <p class="small">운송요금은 표준요금에서 +5000원 단위로 설정가능합니다.</p>
+                    <script>
+                        function count(type) {
+                            // 결과를 표시할 element
+                            const resultElement = document.getElementById('result');
+
+                            // 현재 화면에 표시된 값
+                            let number = resultElement.innerText;
+
+                            // 더하기/빼기
+                            if (type === 'plus') {
+                                number = parseInt(number) + 5000;
+                            } else if (type === 'minus') {
+                                number = parseInt(number) - 5000;
+                            }
+
+                            // 결과 출력
+                            resultElement.innerText = number;
+                        }
+                    </script>
+                </div>
+                <div class="brl">
+                    <button class="cancel" style="background: #E2E2E2;color: #5D5D5D;">취소</button>
+                    <button style="background: #B4162C;color: #fff;">설정하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper mySwiper2">
+            <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">운송의뢰</div>
+                    <div class="swiper-slide">운송대기</div>
+                    <div class="swiper-slide">완료목록</div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="main1"">
+                        <div class=" top">
+                        <p>1. 출발 & 도착 지역 설정</p>
+                    </div>
+                    <div class="container1">
+                        <div class="box">
+                            <figure><img src="./img/go.png" alt=""></figure>
+                            <figure style="width: 0.556vw;margin: 2.222vw auto;"><img src="./img/dot.png" alt="">
+                            </figure>
+                            <figure><img src="./img/stop.png" alt=""></figure>
+                        </div>
+                        <ul>
+                            <li>
+                                <p onclick="location.href='address.html'">출발지 검색</p>
+                                <input type="text" placeholder="세부장소작성" onfocus="this.placeholder=''"
+                                    onblur="this.placeholder='세부장소작성'">
+                            </li>
+                            <li>
+                                <p onclick="location.href='address.html'">도착지 검색</p>
+                                <input type="text" placeholder="세부장소작성" onfocus="this.placeholder=''"
+                                    onblur="this.placeholder='세부장소작성'">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container2">
+                        <div class="top">
+                            <p>2. 운송 정보 입력</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>출발예정시간</p>
+                                <button onclick="location.href='day_time.html'">선 택</button>
+                            </li>
+                            <li>
+                                <p>세이프로더 및 기타견인차량</p>
+                                <button onclick="location.href='car.html'">선 택</button>
+                            </li>
+
+                        </ul>
+                        <p>상차담당자 연락처</p>
+                        <input type="number" placeholder="핸드폰번호" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='핸드폰번호'">
+                        <p>하차담당자 연락처</p>
+                        <input type="number" placeholder="핸드폰번호" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='핸드폰번호'">
+                        <div class="bot">
+                            <div>
+                                <p>예상 소요시간</p>
+                                <p class="ch1"><b>예상소요시간 보기</b></p>
+                                <div class="ch11" style="display: none;">
+                                    <p>1시간 35분</p>
+
+                                </div>
+                            </div>
+                            <div>
+                                <p>표준요금</p>
+                                <p class="ch1 ch1212"><b>요금적용</b></p>
+                                <div class="ch11" style="display: none;">
+                                    <p>30,000원</p>
+                                </div>
+                            </div>
+                            <p class="chum" style="margin-bottom: 3.333vw;">탁송시(정상 운행가능 차량) 탁송요금 적용 </p>
+                            <p class="chum">운행불가(사고차) 적용시 상하차 비용은 별도</p>
+                            <p class="chum">사고차 및 운행불가차량은 표준요금의 70%이상이 선택됩니다.</p>
+
+                            <button class="chart">운송요금</button>
+                            <p class="chum1">* 조건에 따른 운송료가 변경됩니다</p>
+
+                            <div class="result" style="display: none;">
+                                <p>확정 요금</p>
+                                <div class="ch2">
+                                    <p>30,000원</p>
+                                    <button>변경</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bt_box1">
+                        <button class="bt_1">운송의뢰</button>
+                    </div>
+                </div>
+
+                <div class="main2" style="display: none;">
+                    <div class="top">
+                        <p>1. 운송요금확인</p>
+                    </div>
+                    <div class="top2">
+                        <p>운송지 확인</p>
+                    </div>
+                    <div class="container1">
+                        <div class="box">
+                            <figure><img src="./img/go.png" alt=""></figure>
+                            <figure style="width: 0.556vw;margin: 2.222vw auto;"><img src="./img/dot.png" alt="">
+                            </figure>
+                            <figure><img src="./img/stop.png" alt=""></figure>
+                        </div>
+
+                        <ul>
+                            <li style="margin-bottom: 8vw;">
+                                <p class="dd"><b>부산시 강서구</b> 녹산산단 382로 14번가길 10</p>
+                                <p class="ddd"><b>세부장소</b> | CU편의점 앞 주차장</p>
+                            </li>
+                            <li>
+                                <p class="dd"><b>서울시 도봉구</b> 해등로 113</p>
+                                <p class="ddd"><b>세부장소</b> | 건물 앞 1층 주차장</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="bot">
+                        <div style="margin-bottom: 5vw;">
+                            <p>표준요금</p>
+                            <p style="font-size: 4.444vw;font-weight: bold;">90,000원</p>
+                        </div>
+                        <div>
+                            <p>확정요금</p>
+                            <p style="font-size: 5vw;font-weight: 900;">100,000원</p>
+                        </div>
+                    </div>
+                    <div class="container2">
+                        <div class="top">
+                            <p>2. 결제확인</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>결제수단</p>
+                            </li>
+                            <li class="pay_flex">
+                                <div>
+                                    <input type="radio" id="ra1" name="ra1" checked>
+                                    <label for="ra1">신용카드</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="ra2" name="ra1" value="tong">
+                                    <label for="ra2">계좌이체</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="dlqrma">
+                            <p>입금계좌 : <span>0000-0000-00000</span></p>
+                            <p>이름 : <span>000</span></p>
+                        </div>
+                        <div class="point_use">
+                            <p>포인트 사용</p>
+                            <div class="one">
+                                <p>사용 포인트</p>
+                                <div>
+                                    <div>
+                                        <p><b>0</b> 원</p>
+                                    </div>
+                                    <button>전액사용</button>
+                                </div>
+                            </div>
+
+                            <div class="two">
+                                <p>보유 포인트</p>
+                                <div>
+                                    <p>129 원</p>
+                                    <div>
+                                        <input type="checkbox" id="ck1" name="ck1">
+                                        <label for="ck1">항상 전액사용</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <dis class="bot">
+                            <p>최종 결제금액</p>
+                            <p><b>99,500</b> 원</p>
+                        </dis>
+                    </div>
+                    <div class="bt_box1">
+                        <button class="bt_1" style="background: #B4162C;"
+                            onclick="location.href='request_done.html'">결제하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="reservation">
+                    <ul>
+                        <li onclick="location.href='reservation_info.html'">
+                            <div class="top">
+                                <p class="l">대표님<b style="color: #B4162C;">미배정</b> 상태입니다</p>
+                                <p class="r">운송요금 추가</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color1">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color2">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #B4162C;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #B4162C;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="location.href='reservation_info1_sago.html'">
+                            <div class="top">
+                                <p class="l">대표님<b style="color: #B4162C;">배정완료</b></p>
+                                <p class="p">운행불가능</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color3">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color4">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot nogo">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #350776;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #350776;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="location.href='reservation_info1.html'">
+                            <div class="top">
+                                <p class="l">운송<b style="color: #B4162C;">진행중</b></p>
+                                <p class="r">오더번호 23456643780</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color1">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color2">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #B4162C;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #B4162C;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="location.href='reservation_info1.html'">
+                            <div class="top">
+                                <p class="l">대표님<b style="color: #B4162C;">배정완료</b></p>
+                                <p class="r">오더번호 23456643780</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color1">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color2">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #B4162C;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #B4162C;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <div class="reservation">
+                    <ul>
+                        <li onclick="location.href='reservation_info2.html'">
+                            <div class="top">
+                                <p class="f_l">오더번호 2345643780</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color1">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color2">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #B4162C;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #B4162C;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="location.href='reservation_info2.html'">
+                            <div class="top">
+                                <p class="f_l">오더번호 2345643780</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color1">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color2">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #B4162C;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #B4162C;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="location.href='reservation_info2.html'">
+                            <div class="top">
+                                <p class="f_l">오더번호 2345643780</p>
+                            </div>
+                            <div class="mid">
+                                <div>
+                                    <p class="color1">출발</p>
+                                    <p>인천 중구 시흥동3</p>
+                                </div>
+                                <figure><img src="./img/next2.png" alt=""></figure>
+                                <div>
+                                    <p class="color2">도착</p>
+                                    <p>경기 고양 일산동구</p>
+                                </div>
+                            </div>
+                            <div class="bot">
+                                <div class="l">
+                                    <p style="margin-bottom: 3.333vw;">21년 2월 11일 11:00</p>
+                                    <p style="color: #B4162C;">일반승용/소나타</p>
+                                </div>
+                                <div class="r">
+                                    <p style="margin-bottom: 3.333vw;">셀프로더</p>
+                                    <p class="strong"><b style="color: #B4162C;">90,000</b>원</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+</body>
+
+</html>

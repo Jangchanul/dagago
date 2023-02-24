@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head" style="background: #fff;">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>개인정보</p>
+        </div>
+    </header>
+    <section class="privacy">
+        <ul class="mid">
+            <li>
+                <div>
+                    <p class="b">이름</p>
+                    <p>홍길동</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="b">핸드폰번호</p>
+                    <p>010-1234-5678</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="b">이메일</p>
+                    <p>ksm123@gmail.com</p>
+                </div>
+            </li>
+            <li>
+                <div style="justify-content: space-between;">
+                    <p>비밀번호</p>
+                    <p style="margin-left: -18vw;">*******</p>
+                    <button onclick="location.href='pw1.html'">변경하기</button>
+                </div>
+            </li>
+            <li>
+                <div style="justify-content: space-between;">
+                    <p class="b">회원탈퇴하기</p>
+                    <button class="out">회원탈퇴</button>
+                </div>
+            </li>
+        </ul>
+        <div class="bt_box1">
+            <button class="bt_1" style="background: #B4162C;" onclick="location.href='pw.html'">개인정보 수정</button>
+        </div>
+    </section>
+    <div class="popup">
+        <div class="bg"></div>
+        <div class="box">
+            <p>회원탈퇴</p>
+            <div class="mid">
+                <p style="font-size: 5.556vw;margin-bottom: 6.667vw;">회원탈퇴 하시겠습니까?</p>
+                <p style="color: #989898;width: 60%;margin: 0 auto;">회원탈퇴를 하면 지금까지의 모든내역이 삭제됩니다</p>
+            </div>
+            <div class="bot">
+                <button class="close" style="background: #E2E2E2;color: #5D5D5D;">닫기</button>
+                <button class="plus" style="background: #B4162C;color: #fff;">회원탈퇴하기</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup3">
+        <div class="bg"></div>
+        <div class="box">
+            <p>회원탈퇴</p>
+            <div class="mid">
+                <p style="font-size: 5.556vw;margin-bottom: 6.667vw;">회원탈퇴가 완료되었습니다.</p>
+                <p style="color: #989898;width: 87%;margin: 0 auto;">다가고를 이용해주시고 사랑해주셔서 감사합니다. 더욱더 노력하고 발전하는 바로고가 되겠습니다.</p>
+            </div>
+            <div class="bot">
+                <button class="plus" style="background: #B4162C;color: #fff;" onclick="location.href='login.html'">확인</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

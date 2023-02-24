@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+</head>
+
+<body>
+    <header class="back_head"">
+        <div>
+            <figure onclick=" javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+        <p>차량 선택</p>
+        </div>
+    </header>
+    <section class="car_add">
+        <div class="one">
+            <p>1. 운송 차량 선택</p>
+            <ul>
+                <li>
+                    <input type="radio" id="ck1" name="ck1">
+                    <label for="ck1">승용 전 차종</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck2" name="ck1">
+                    <label for="ck2">SUV, RV</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck3" name="ck1">
+                    <label for="ck3">버스</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck4" name="ck1">
+                    <label for="ck4">화물차 1t이하</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck5" name="ck1">
+                    <label for="ck5">화물차 5t이하</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck6" name="ck1">
+                    <label for="ck6">화물차 10t이하</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck7" name="ck1">
+                    <label for="ck7">화물차 20t이하</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck8" name="ck1">
+                    <label for="ck8">화물차 20t이상</label>
+                </li>
+                <li>
+                    <input type="radio" id="ck9" name="ck1">
+                    <label for="ck9">기타(중장비,카라반,기타장비)</label>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="bt_box1">
+            <button class="bt_1" onclick="location.href='request.html'" style="background: #B4162C;">확인</button>
+        </div>
+    </section>
+</body>
+
+</html>

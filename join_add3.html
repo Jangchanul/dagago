@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>정보입력</p>
+        </div>
+    </header>
+    <section class="join_add3">
+        <ul>
+            <li>
+                <p>1. 기본정보</p>
+                <input type="text" placeholder="이름">
+                <input type="number" placeholder="핸드폰 번호"">
+                <input type="email" placeholder="이메일 주소">
+            </li>
+            <li>
+                <p>2. 회사정보 (선택입력)</p>
+                <input type="text" placeholder="회사(직장) 명">
+                <input type="text" placeholder="직위">
+                <p class="red">* 자동차 관련 업무 종사자일 경우 회사명과 직위를 기재하시면 최초 회원 가입시 1만 포인트가 제공 됩니다.</p>
+            </li>
+        </ul>
+        <div class="bt_box"><button class="bt" onclick="location.href='join_add4.html'">다음으로</button></div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        function count(type) {
+            // 결과를 표시할 element
+            const resultElement = document.getElementById('result');
+
+            // 현재 화면에 표시된 값
+            let number = resultElement.innerText;
+
+            // 더하기/빼기
+            if (type === 'plus') {
+                number = parseInt(number) + 5000;
+            } else if (type === 'minus') {
+                number = parseInt(number) - 5000;
+            }
+
+            // 결과 출력
+            resultElement.innerText = number;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="back_head"">
+        <div>
+            <figure onclick=" javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+        <p>요금추가</p>
+        </div>
+    </header>
+    <section class="add_fee">
+        <div class="top">
+            <ul>
+                <li>
+                    <div>
+                        <p class="small">현재운송요금</p>
+                        <p class="strong"><b>100,000</b> 원</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="small">추가결제요금</p>
+                        <div class="count">
+                            <input type='button' onclick='count("plus")' value='&and;' />
+                            <div id='result'>
+                                <p class="won"><b>5,000</b>원</p>
+                            </div>
+                            <input type='button' onclick='count("minus")' value='&or;' />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="small">최종요금</p>
+                        <p class="strong"><b>105,000</b> 원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bot">
+            <div>
+                <p class="small">추가결제요금</p>
+                <p class="won"><b>5,000</b>원</p>
+            </div>
+        </div>
+        <div class="bt_box1">
+            <button class="bt_1" style="background: #B4162C;">추가결제하기</button>
+        </div>
+    </section>
+</body>
+
+</html>

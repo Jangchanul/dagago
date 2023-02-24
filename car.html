@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        function setThumbnail(event) {
+            for (var image of event.target.files) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    var img = document.createElement("img");
+                    img.setAttribute("src", event.target.result);
+                    document.querySelector("div#image_container").appendChild(img);
+                };
+                console.log(image);
+                reader.readAsDataURL(image);
+            }
+        }
+        $(function () {
+            $("#image_container img").click(function () {
+                $(this).hide()
+            })
+            
+            $("#ggg1").click(function () {
+                
+                var aa = $('#ggg1').is(':checked');
+                if(aa == true){
+                    $(".go_sago").hide()
+                }
+            })
+            $("#ggg2").click(function () {
+                
+                var aa = $('#ggg2').is(':checked');
+                if(aa == true){
+                    $(".go_sago").show()
+                }
+            })
+        })
+    </script>
+
+
+</head>
+
+<body>
+    <header class="back_head"">
+        <div>
+            <figure onclick=" javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+        <p>캐리어 / 차량종류 선택</p>
+        </div>
+    </header>
+    <section class="car">
+        <div class="select">
+            <p>1. 운송차량</p>
+            <div>
+                <input type="radio" id="ck1" name="ck1">
+                <label for="ck1">
+                    <div class="cbox">
+                        <img src="./img/img2.png" alt="">
+                    </div>
+                    <p>셀프로더</p>
+                </label>
+                <input type="radio" id="ck2" name="ck1">
+                <label for="ck2">
+                    <div class="cbox">
+                        <img src="./img/img1.png" alt="">
+                    </div>
+                    <p>견인차</p>
+                </label>
+                <input type="radio" id="ck3" name="ck1">
+                <label for="ck3">
+                    <div class="cbox">
+                        <img src="./img/car3.png" alt="">
+                    </div>
+                    <p>견인차(크레인형)</p>
+                </label>
+            </div>
+
+        </div>
+        <div class="select">
+            <p>2. 운송 대상 차량</p>
+            <div class="lun4">
+                <input type="checkbox" id="l4" name="l4">
+                <label for="l4">4륜 여부</label>
+            </div>
+            <ul>
+                <li>
+                    <input type="radio" id="ggg1" name="gsgs">
+                    <label for="ggg1">운행가능</label>
+                </li>
+                <li>
+                    <input type="radio" id="ggg2" name="gsgs">
+                    <label for="ggg2">운행불가능</label>
+                </li>
+            </ul>
+            <ul class="go_sago" style="display: none;">
+                <li>
+                    <input type="radio" id="ggg3" name="gsgs1">
+                    <label for="ggg3">사고차</label>
+                </li>
+                <li>
+                    <input type="radio" id="ggg4" name="gsgs1">
+                    <label for="ggg4">고장차</label>
+                </li>
+            </ul>
+            <div class="img_plus">
+                <div>
+                    <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);">
+                    <label for="image" style="color: #5813f8;font-weight: bold;background: none;">+ 이미지첨부</label>
+                    <div id="image_container"></div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <button class="bt_ch" onclick="location.href='car_add.html'" type="button">
+            차량선택하기
+        </button>
+
+        <div class="bt_box1">
+            <button class="bt_1" onclick="location.href='request.html'" style="background: #B4162C;">확인</button>
+        </div>
+    </section>
+</body>
+
+</html>

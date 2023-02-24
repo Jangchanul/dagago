@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head" style="background: #fff;">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>첫 페이지 설정하기</p>
+        </div>
+    </header>
+    <section class="select_page">
+        <ul>
+            <li>
+                <div>
+                    <input type="radio" id="ck1" name="ck1" checked>
+                    <label for="ck1">메인화면으로 설정</label>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="radio" id="ck2" name="ck1">
+                    <label for="ck2">운송의뢰화면으로 설정</label>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="radio" id="ck3" name="ck1">
+                    <label for="ck3">저장목록화면으로 설정</label>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="radio" id="ck4" name="ck1">
+                    <label for="ck4">완료목록화면으로 설정</label>
+                </div>
+            </li>
+        </ul>
+        <div class="bt_box1">
+            <button class="bt_1" style="background: #B4162C;" onclick="location.href='my_page.html'">확인</button>
+        </div>
+    </section>
+</body>
+
+</html>

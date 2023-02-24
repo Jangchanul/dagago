@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <section class="login">
+        <p class="head">안녕하세요 <b>다가go</b> 입니다</p>
+        <form class="login_box">
+            <p class="red">계정정보가 일치하지 않습니다.</p>
+            <input type="text" placeholder="아이디" required>
+            <input type="password" placeholder="비밀번호" required>
+
+            <ul class="ck_box">
+                <li>
+                    <input type="checkbox" id="ck1" name="ck1" checked>
+                    <label for="ck1">자동로그인</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="ck2" name="ck1">
+                    <label for="ck2">아이디저장</label>
+                </li>
+            </ul>
+
+            <button type="button" type="button" onclick="location.href='index.html'">로그인</button>
+            
+            <ul class="find_box">
+                <li onclick="location.href='find_id.html'">아이디 찾기</li>
+                <li>|</li>
+                <li onclick="location.href='find_pw.html'">비밀번호 찾기</li>
+            </ul>
+        </form>
+        <div class="foot">
+            <p style="margin-bottom: 3.333vw;">아직 계정이 없으신가요?</p>
+            <a href="join.html">'회원가입'</a>
+        </div>
+    </section>
+</body>
+
+</html>

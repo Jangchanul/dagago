@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다가고</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="back_head" style="background: #fff;">
+        <div>
+            <figure onclick="javascript:history.back()"><img src="./img/back.png" alt=""></figure>
+            <p>비밀번호 설정</p>
+        </div>
+    </header>
+    <section class="pw">
+        <div class="top">
+            <p>새로운 비밀번호를 입력해주세요.</p>
+            <input type="password" placeholder="새로운 비밀번호" onfocus="this.placeholder=''" onblur="this.placeholder='새로운 비밀번호'" style="margin-bottom: 2.222vw;">
+            <p style="color: #ABABAB;font-size: 3.333vw;margin-bottom: 3.333vw;margin-left: 5vw;">영문, 숫자를 포함하여 6~15자로 입력해 주세요</p>
+            <input type="password" placeholder="새로운 비밀번호 확인" onfocus="this.placeholder=''" onblur="this.placeholder='새로운 비밀번호 확인'">
+        </div>
+        <div class="bt_box1">
+            <button class="bt_1" onclick="location.href='pw_set_f.html'">비밀번호 확인</button>
+        </div>
+    </section>
+    
+</body>
+
+</html>
